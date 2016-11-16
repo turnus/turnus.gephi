@@ -1,0 +1,5 @@
+Manifest-Version: 1.0
+OpenIDE-Module-Name: Turnus Gephi Trace Importer
+OpenIDE-Module-Short-Description: Turnus Trace Importer
+OpenIDE-Module-Long-Description: Import the trace files generated with the Turnus Design Space Exploration framework. Supported file extensions are: *.trace and *.tracez
+OpenIDE-Module-Display-Category: Import
