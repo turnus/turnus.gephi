@@ -1,0 +1,65 @@
+# Gephi Turnus Trace Importer Plugin
+
+TURNUS plugins for link:https://www.gephi.org[Gephi] (the opensource graphs visualization platform). link:https://gephi.github.io/tutorials/gephi-tutorial-quick_start.pdf[Here] you can find a nice quick-start tutorial for Gephi in order to immediately start visualizing your exectution trace graphs! 
+
+image::http://www.turnus.co/addons/gephi/imgs/trace.png[scaledwidth="20%",alt="A small portion of an execution trace graph of an HEVC decoder",align="center"]
+
+## The Execution Trace Importer
+This plugin is a Gephi file importer for the execution trace graph generated using TURNUS. The latest plugin release is available link:http://turnus.co/addons/gephi/turnus-gephi-importer-plugin-2.1.0.nbm[here].
+
+To import a **.trace** or a  **.tracez** file in Gephi go:
+
+----
+File -> Open
+----
+
+and select your execution trace graph file. 
+Two option tabs are available to define some import options: 
+
+Dependencies::
+As illustrated in the picture belowe, the set of dependencies to be imported is proposed:
+* **FSM**: check this box if you want to load all the FSM dependencies.
+* **Guard**: check this box if you want to load all the guard dependencies (i.e. enable/disable).
+* **Port**: check this box if you want to load all the port dependencies (i.e. input/ouput).
+* **Internal variable**: check this box if you want to load all the internal variable dependencies (i.e. read/read, read/write, write/read, write/write).
+* **Tokens**: check this box if you want to load all the tokens dependencies.
+* **Unknown**: check this box if you want to load all the uncategorized dependencies.
+
+image::http://www.turnus.co/addons/gephi/imgs/option1.png[scaledwidth="20%"]
+
+Loading options::
+As illustrated in the picture belowe, it is possible to load the execution trace graph as a vertex graph and limit the number of loaded firings:
+* **Load as vertex graph**: check this box if you want to load the execution trace graph as a vertex graph. Firings and dependencies will be represented both as a vertex.
+* **Limit the number of loaded firings**: check this box if you want to load a limited number of firings. An option tab where set this number will be prompted.
+
+image::http://www.turnus.co/addons/gephi/imgs/option2.png[scaledwidth="20%"]
+
+### Supported Gephi versions
+This plugin supports the latest **0.8.2-beta** version of Gephi.
+
+## How to install a plugin in Gephi
+Download on your disk the latest plugin release and save it on your disk. Then from Gephi follow:
+
+----
+Tools -> Plugins -> Downloaded -> Add Plugin
+----
+and select the file that you just downloaded. Follow the instructions and you have done: your plugin is now installed!
+
+Memory available to Gephi is determined by Java. It is possible that for very-big execution trace graphs Gephi will run out-of memory. Less or more memory can be allocated by configuring the Gephi’s startup settings as described  link:https://gephi.github.io/users/install/#memory[here]. 
+
+## Only for developers
+When Gephi is run from link:http://netbeans.org/[NetBeans] it does not appear to use the correct settings for the heap memory (xmx xms etc.). You need to overwrite these settings in the directory where you have the gephi source-code 
+`/submodules/gephi-plugins/nbproject/project.properties` as described in the following:
+
+----
+run.args.extra=-J-Xms256m -J-Xmx8g
+----
+
+## Copyright and license
+
+TURNUS is copyright 2010-2015 link:http://gramm.epfl.ch[**EPFL - SCI STI MM**], All Rights Reserved.
+
+All the source code available in this repository is licensed under the link:http://www.gnu.org/licenses[GPL, Version 3.0]: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+TURNUS is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details.
+
+
