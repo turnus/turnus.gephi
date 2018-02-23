@@ -2,10 +2,10 @@
 
 TURNUS plugins for link:https://www.gephi.org[Gephi] (the opensource graphs visualization platform). link:https://gephi.github.io/tutorials/gephi-tutorial-quick_start.pdf[Here] you can find a nice quick-start tutorial for Gephi in order to immediately start visualizing your exectution trace graphs! 
 
-image::http://www.turnus.co/addons/gephi/imgs/trace.png[scaledwidth="20%",alt="A small portion of an execution trace graph of an HEVC decoder",align="center"]
+image::http://scistimm.epfl.ch/turnus/addons/gephi/imgs/trace.png[scaledwidth="20%",alt="A small portion of an execution trace graph of an HEVC decoder",align="center"]
 
 ## The Execution Trace Importer
-This plugin is a Gephi file importer for the execution trace graph generated using TURNUS. The latest plugin release is available link:http://turnus.co/addons/gephi/turnus-gephi-importer-plugin-2.1.0.nbm[here].
+This plugin is a Gephi file importer for the execution trace graph generated using TURNUS. The latest plugin release is available link:http://scistimm.epfl.ch/turnus/addons/gephi/turnus-gephi-importer-plugin-2.1.0.nbm[here].
 
 To import a **.trace** or a  **.tracez** file in Gephi go:
 
@@ -25,14 +25,14 @@ As illustrated in the picture belowe, the set of dependencies to be imported is 
 * **Tokens**: check this box if you want to load all the tokens dependencies.
 * **Unknown**: check this box if you want to load all the uncategorized dependencies.
 
-image::http://www.turnus.co/addons/gephi/imgs/option1.png[scaledwidth="20%"]
+image::http://scistimm.epfl.ch/turnus/addons/gephi/imgs/option1.png[scaledwidth="20%"]
 
 Loading options::
 As illustrated in the picture belowe, it is possible to load the execution trace graph as a vertex graph and limit the number of loaded firings:
 * **Load as vertex graph**: check this box if you want to load the execution trace graph as a vertex graph. Firings and dependencies will be represented both as a vertex.
 * **Limit the number of loaded firings**: check this box if you want to load a limited number of firings. An option tab where set this number will be prompted.
 
-image::http://www.turnus.co/addons/gephi/imgs/option2.png[scaledwidth="20%"]
+image::http://scistimm.epfl.ch/turnus/addons/gephi/imgs/option2.png[scaledwidth="20%"]
 
 ### Supported Gephi versions
 This plugin supports the latest **0.8.2-beta** version of Gephi.
